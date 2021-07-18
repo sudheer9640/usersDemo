@@ -2,6 +2,8 @@
 
 If needed, i can develop using  node and react
 
+Used passport-jwt strategy for authentication and authorization. 
+
 [![Screenshot-266.png](https://i.postimg.cc/LsSmnYsF/Screenshot-266.png)](https://postimg.cc/ZWwGQq3w)
 
 
