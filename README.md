@@ -12,6 +12,9 @@ Used passport-jwt strategy for authentication and authorization.
 
 [![Screenshot-267.png](https://i.postimg.cc/1t9RYnxr/Screenshot-267.png)](https://postimg.cc/8F0V7Cz7)
 
+[![Screenshot-270.png](https://i.postimg.cc/vTZtsFSx/Screenshot-270.png)](https://postimg.cc/bD4txMPq)
+
+[![Screenshot-269.png](https://i.postimg.cc/9XLBB0rd/Screenshot-269.png)](https://postimg.cc/Hj75Yp0n)
 
 [![Screenshot-265.png](https://i.postimg.cc/wvTHQCJW/Screenshot-265.png)](https://postimg.cc/CZtWF6cD)
 
