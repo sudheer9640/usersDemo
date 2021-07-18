@@ -1,0 +1,27 @@
+<div class="main-container">
+  <div class="signup-block">
+    <h3 class="title">Login into your account</h3>
+
+    <form #loginForm="ngForm" class="reg-form" (ngSubmit)="loginForm.form.valid && login()">
+      <mat-form-field appearance="standard" class="full-width">
+        <mat-icon matPrefix>mail</mat-icon>
+        <mat-label>Email Address</mat-label>
+        <input matInput placeholder="Enter your email address" name="email" [(ngModel)]="loginModel.email" (change)="loginModel.email=loginModel.email.trim()" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="standard" class="full-width">
+        <mat-icon matPrefix>lock</mat-icon>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Enter Password" name="password" [(ngModel)]="loginModel.password" (change)="loginModel.password=loginModel.password.trim()" required>
+      </mat-form-field>
+
+      <div class="btm-block">
+        <div class="links">
+          <a class="fp">Forgot Password?</a>
+        </div>
+        <button mat-stroked-button color="primary" [disabled]="!loginForm.form.valid">Login</button>
+        <button mat-stroked-button color="primary" class="register" [routerLink]="['../register']">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

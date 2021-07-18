@@ -1,0 +1,36 @@
+.side-menu {
+  padding-top: 1px;
+  border-radius: 8px;
+}
+
+.side-menu a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.8vw;
+  padding-right: 6vw;
+}
+
+.side-menu a:hover {
+  color: black;
+  background-color: #E9E9E9;
+}
+
+.side-menu a icon {
+}
+
+.side-menu a span {
+  padding-left: 15px;
+}
+
+.sidenav-content {
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .side-menu a {
+    padding: 2.5vw;
+  }
+}
+

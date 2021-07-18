@@ -1,0 +1,125 @@
+.alert-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+
+  .alert-modal-content {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+    border-radius: 5px;
+
+
+    .alert-modal-header {
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px 5px 0 0;
+
+      .icon-box {
+        color: #fff;
+        width: 65px;
+        height: 65px;
+        display: inline-block;
+        border-radius: 50%;
+        z-index: 9;
+        border: 5px solid #fff;
+        padding: 15px;
+        text-align: center;
+
+        i {
+          font-size: 44px;
+          margin: -9px 0 0 -10px;
+        }
+      }
+    }
+
+    .alert-modal-body {
+      padding: 15px;
+
+      h4 {
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 10px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+
+    .alert-modal-footer {
+      padding-bottom: 10px;
+
+      .btn {
+        color: #fff;
+        background: #eeb711;
+        transition: all 0.4s;
+        border-radius: 30px;
+        padding: 10px 25px;
+        border: none;
+        margin-left: 70%;
+        cursor: pointer;
+      }
+
+      .btn:hover, .btn:focus {
+        background: #eda645;
+        outline: none;
+      }
+    }
+  }
+
+  .alert-modal-content.success .alert-modal-header {
+    background: #47c9a2;
+  }
+
+  .alert-modal-content.error .alert-modal-header {
+    background: #e85e6c;
+  }
+
+  .alert-modal-content.warn .alert-modal-header {
+    background: #e85e6c;
+  }
+
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -50%;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -50%;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+

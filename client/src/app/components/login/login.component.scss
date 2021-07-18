@@ -1,0 +1,82 @@
+.main-container {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../../assets/images/bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.signup-block {
+  width: 400px;
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px 50px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.signup-block:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.reg-form {
+  margin-top: 50px
+}
+
+.full-width {
+  width: 100%;
+}
+
+h3 {
+  font-weight: normal;
+  color: #767676;
+  text-align: center;
+  font-size: 2em;
+}
+
+.signup-block .btm-block .links {
+  margin-bottom: 15px;
+}
+
+.signup-block .btm-block a {
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.signup-block .btm-block a.fp {
+  margin-right: 15px;
+}
+
+input[type=submit] {
+  color: rgb(125, 125, 125);
+  border: none;
+  width: 100%;
+  text-align: center;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+input[type=submit]:enabled {
+  background-color: #4682B4;
+  color: #fff;
+}
+
+input[type=submit] :hover {
+  opacity: 0.9;
+}
+
+.register {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .signup-block {
+    width: 95%;
+    padding: 15px;
+  }
+}

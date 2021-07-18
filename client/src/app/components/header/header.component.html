@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <span class="hamburger" (click)="toggleSideNav()">&#9776;</span>
+  ̥<img class="app-logo" alt="Logo" src="assets/images/logo.png"/>
+  <span class="app-title">Leading Tech</span>
+  <div class="spacer"></div>
+  <button mat-stroked-button [matMenuTriggerFor]="menu">Account</button>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+  <div class="account-info">
+    <div class="image-block">
+      <img mat-card-avatar src="assets/images/header/userPlaceholder.png" alt="user"/>
+    </div>
+    <p class="name">User</p>
+    <button mat-stroked-button (click)="logOut()">Logout</button>
+  </div>
+</mat-menu>

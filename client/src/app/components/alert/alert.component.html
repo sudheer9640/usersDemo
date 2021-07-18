@@ -1,0 +1,20 @@
+
+<div *ngIf="message" class="alert-modal">
+  <div class="alert-modal-content" [ngClass]="{'success': message.type === 'success', 'error': message.type === 'error', 'warn': message.type === 'warn'}">
+    <div class="alert-modal-header">
+      <div class="icon-box">
+        <i class="material-icons" *ngIf="message.type == 'success'">&#xE876;</i>
+        <i class="material-icons" *ngIf="message.type == 'error'">&#xE5CD;</i>
+        <i class="material-icons" *ngIf="message.type == 'warn'">&#xE5CD;</i>
+      </div>
+
+    </div>
+    <div class="alert-modal-body text-center ">
+      <h4>{{message.type | titlecase}}</h4>
+      <p>{{message.text}}.</p>
+    </div>
+    <div class="alert-modal-footer">
+      <button class="btn" (click)="dismissAlert()">Ok</button>
+    </div>
+  </div>
+</div>

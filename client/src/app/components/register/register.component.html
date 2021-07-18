@@ -1,0 +1,46 @@
+<div class="main">
+  <div class="signup-block">
+    <form #regform="ngForm" class="reg-form" (ngSubmit)="register()">
+      <mat-form-field class="full-width">
+        <mat-label>Name</mat-label>
+        <input type="text" matInput name="firstName" [(ngModel)]="registerModel.name"
+               required minlength="6">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input type="text" matInput name="email" [(ngModel)]="registerModel.email" required>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Phone Number</mat-label>
+        <input type="text" matInput name="mobNo" [(ngModel)]="registerModel.phoneNumber" required minlength="10"
+               maxlength="10">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput name="password" [(ngModel)]="registerModel.password"
+               (change)="confirmPassword()" required minlength="5"/>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" matInput name="cPassword" [(ngModel)]="cPassword"
+              (change)="confirmPassword()" required minlength="5"/>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Role</mat-label>
+        <mat-select [(ngModel)]="registerModel.role" name="designation" required>
+          <mat-option *ngFor="let role of userRoles" [value]="role">{{role}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="btm-block">
+        <button type="submit" mat-stroked-button [disabled]="!regform.form.valid">Register</button>
+        <p>By registering, you agree to our <span><a>Terms & Conditions</a></span></p>
+      </div>
+    </form>
+  </div>
+</div>

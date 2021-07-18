@@ -1,0 +1,63 @@
+mat-toolbar {
+  background-color: #4f6b88;
+  color: #ffffff;
+  box-shadow: 0 3px 5px #aaaaaa;
+  margin-bottom: 5px;
+
+  .spacer {
+    flex: 1;
+  }
+
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+  }
+
+  img {
+    margin: 0 15px;
+    width: 100px;
+  }
+
+  button {
+    font-size: 14px;
+    color: #4f6b88;
+    padding: 0px 20px;
+    border-radius: 4px;
+    outline: none;
+    background-color: #ffffff;
+  }
+}
+
+.account-info {
+  width: 250px;
+  padding: 10px;
+  text-align: center;
+  .image-block {
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  }
+  .name {
+    margin-top: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  mat-toolbar {
+    .hamburger {
+      display: block;
+    }
+    img.app-logo {
+      width: 60px;
+    }
+
+    .app-title {
+      font-size: 15px;
+    }
+  }
+}

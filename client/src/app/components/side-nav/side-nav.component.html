@@ -1,0 +1,14 @@
+<div class="side-menu">
+  <a [routerLink]="['/users']" *ngIf="isAdmin" matRipple>
+    <mat-icon>people</mat-icon>
+    <span>Users</span>
+  </a>
+  <a [routerLink]="['/profile']" *ngIf="!isAdmin" matRipple>
+    <mat-icon>person</mat-icon>
+    <span>Profile</span>
+  </a>
+  <a [routerLink]="['/settings']" matRipple>
+    <mat-icon>settings</mat-icon>
+    <span>Settings</span>
+  </a>
+</div>

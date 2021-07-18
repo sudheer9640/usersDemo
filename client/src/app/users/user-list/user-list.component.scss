@@ -1,0 +1,52 @@
+.container {
+  padding: 25px;
+}
+
+.filter-block {
+  margin-top: 10px;
+}
+
+.filter-block .search-field {
+  float: right;
+  margin-right: 100px;
+}
+
+.submanage-block {
+  margin-bottom: 20px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #cecece;
+}
+
+td,
+th {
+  border: 1px solid #09c829;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #9ccb4b;
+  color: #ffffff;
+}
+
+table td.actions {
+  text-align: center;
+}
+
+table td.actions mat-icon {
+  cursor: pointer;
+}
+
+table th.width-30 {
+  width: 80px;
+}
+
+
+/* table th.width-200 {
+      width: 200px;
+    } */

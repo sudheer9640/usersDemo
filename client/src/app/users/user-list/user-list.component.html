@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-form-field class="search-field">
+    <input matInput type="text" placeholder="Search By Name" [(ngModel)]="searchString" />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+  <table>
+    <tr>
+      <th>S.NO</th>
+      <th class="width-200">Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Role</th>
+      <th class="width-30">Manage</th>
+    </tr>
+
+      <tr *ngFor="let user of users;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{user.userName }}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phoneNumber}}</td>
+        <td>{{user.role}}</td>
+        <td class="actions">
+          <mat-icon [routerLink]="['../profile', user._id]">edit</mat-icon>
+        </td>
+      </tr>
+  </table>
+</div>

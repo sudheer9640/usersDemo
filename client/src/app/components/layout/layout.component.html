@@ -1,0 +1,15 @@
+<app-header (sideNavToggle)="mobileQuery.matches && snav.toggle()"></app-header>
+
+<mat-sidenav-container class="example-sidenav-container">
+  <mat-sidenav #snav [ngClass]="{ 'hideLabel': mobileQuery.matches }"
+               [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="62"
+               [opened]="mobileQuery.matches ? 'false' : 'true'">
+    <app-side-nav></app-side-nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+    <app-alert></app-alert>
+    <app-spinner></app-spinner>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f912657-6403-4b45-aac6-fb07c2a885cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/app.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/config/envConfig.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/config/passport.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/constants/constants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/constants/errorConstants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/controllers/authController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/controllers/userController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/middleware.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/mongoDb/connection.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/mongoDb/models/user.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/mongoDb/mongoClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/routes/authRouter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/routes/userRouter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/services/authService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/services/userService.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/services/userService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/utils/serverHandlers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/utils/utilities.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/constants/apiEndPoints.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/constants/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1vQwkuFT1fwNxb0B7gvrVMZKpXs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\ksudheer\3D Objects\luxsoft\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ksudheer\3D Objects\luxsoft\server\src" />
+      <recent name="C:\Users\ksudheer\3D Objects\luxsoft\src\assets\images" />
+      <recent name="C:\Users\ksudheer\3D Objects\luxsoft\src\app\services\spinner" />
+      <recent name="C:\Users\ksudheer\3D Objects\luxsoft\src\app\services\http" />
+      <recent name="C:\Users\ksudheer\3D Objects\luxsoft\src\app\services\alert" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ksudheer\3D Objects\luxsoft\server\src" />
+      <recent name="C:\Users\ksudheer\3D Objects\luxsoft\server" />
+      <recent name="C:\Users\ksudheer\3D Objects\luxsoft\src\app\services" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (luxsoft)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f912657-6403-4b45-aac6-fb07c2a885cd" name="Default Changelist" comment="" />
+      <created>1626507766308</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626507766308</updated>
+      <workItem from="1626507768154" duration="13822000" />
+      <workItem from="1626526477892" duration="5172000" />
+      <workItem from="1626584321890" duration="11736000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

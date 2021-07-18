@@ -1,0 +1,36 @@
+mat-sidenav-container {
+  height: calc(100% - 70px);
+  background-color: #ffffff;
+
+  mat-sidenav {
+    background-color: #4f6b88;
+    box-shadow: 5px 0 5px #aaaaaa;
+    color: #ffffff;
+    width: 15%;
+    transition: all 0.3s;
+  }
+
+  mat-sidenav-content {
+    margin-left: 15%;
+    padding: 3% 5%;
+    height: 80%;
+  }
+}
+
+.mat-drawer-side {
+  border: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  mat-sidenav-container {
+    height: 100%;
+    mat-sidenav {
+      width: 45%;
+      transition: none;
+    }
+    mat-sidenav-content {
+      margin-left: 0;
+    }
+  }
+}
