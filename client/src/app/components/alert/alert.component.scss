@@ -1,17 +1,17 @@
 .alert-modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1050;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
   animation-duration: 0.4s;
 
   .alert-modal-content {
@@ -102,24 +102,24 @@
 /* Add Animation */
 
 @-webkit-keyframes animatetop {
-  from {
-    top: -50%;
-    opacity: 0
-  }
-  to {
-    top: 0;
-    opacity: 1
-  }
+    from {
+        top: -50%;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
 @keyframes animatetop {
-  from {
-    top: -50%;
-    opacity: 0
-  }
-  to {
-    top: 0;
-    opacity: 1
-  }
+    from {
+        top: -50%;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 

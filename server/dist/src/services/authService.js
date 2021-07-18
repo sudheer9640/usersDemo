@@ -20,10 +20,10 @@ const envConfig_1 = require("../config/envConfig");
 class AuthService {
     constructor() {
         this.register = (req) => __awaiter(this, void 0, void 0, function* () {
-            const { userName, phoneNumber, email, password, role } = req.body;
+            const { name, phoneNumber, email, password, role } = req.body;
             try {
                 const userData = {
-                    userName,
+                    name,
                     phoneNumber,
                     email,
                     role
@@ -54,7 +54,7 @@ class AuthService {
                         throw this.buildErr("User doesn't exists");
                     }
                     else if (!user_model_1.validPassword(password, user.password)) {
-                        this.buildErr('Incorrect password');
+                        throw this.buildErr('Incorrect password');
                     }
                     else {
                         const userJson = {

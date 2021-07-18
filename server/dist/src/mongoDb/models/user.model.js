@@ -23,7 +23,7 @@ exports.User = exports.validPassword = exports.generateHash = void 0;
 const mongoose_1 = require("mongoose");
 const bcrypt = __importStar(require("bcryptjs"));
 const userSchema = new mongoose_1.Schema({
-    userName: {
+    name: {
         type: String
     },
     email: {

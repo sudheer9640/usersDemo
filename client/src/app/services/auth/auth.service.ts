@@ -7,7 +7,6 @@ import decode from 'jwt-decode';
 import {apiEndpoints} from "../../constants/apiEndPoints";
 import {tap} from "rxjs/operators";
 import {HttpService} from "../http/http.service";
-import {HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +28,6 @@ export class AuthService {
     };
     return this.http.post(apiEndpoints.LOGIN, payLoad, httpOptions).pipe(tap((res: any) => {
       // store user details and jwt token in local storage to keep user logged in between page refreshes
-      console.log('res', res);
       const token = res.headers.get('Authorization');
       this.startSession(token);
       return res;
@@ -38,6 +36,7 @@ export class AuthService {
 
   startSession(token: string): boolean {
     // console.log('startSession', token);
+    this.clearSession();
     if (!!token) {
       localStorage.setItem('token', token);
       this.currentUserSubject.next(this.getUser(token));
@@ -88,9 +87,13 @@ export class AuthService {
 
   logout(): void {
     if (!!this.token) {
-      localStorage.removeItem('token');
-      this.router.navigate(['/login']);
+       this.clearSession();
+       this.router.navigate(['/login']);
     }
+  }
+
+  clearSession(): void {
+    localStorage.removeItem('token');
   }
 
 }

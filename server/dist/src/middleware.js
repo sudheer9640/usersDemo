@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addResponseHeaders = void 0;
+exports.checkReqBodyParams = exports.addResponseHeaders = void 0;
 const utilities_1 = require("./utils/utilities");
 const path_1 = require("path");
 const envConfig_1 = require("./config/envConfig");
+const constants_1 = require("./constants/constants");
 const fileName = path_1.basename(__filename);
 const addResponseHeaders = (req, res, next) => {
     const origin = req.headers.origin || req.headers.refferer;
@@ -26,7 +27,24 @@ const addResponseHeaders = (req, res, next) => {
     }
 };
 exports.addResponseHeaders = addResponseHeaders;
-const sendErrorResponseBack = (response, statusCode, error) => {
-    const errorResponse = utilities_1.buildErrorResponse(statusCode, error.errorRes, error.errorName, error.errorReason);
-    response.status(statusCode).send(errorResponse);
+const checkReqBodyParams = (req, res, next) => {
+    const reqUrl = req.url.replace('/', '').trim();
+    if (constants_1.REQ_MANDATORY_PARAMS[reqUrl]) {
+        const missingParams = [];
+        const mandatoryParams = constants_1.REQ_MANDATORY_PARAMS[reqUrl];
+        for (const param of mandatoryParams) {
+            if (!req.body[param]) {
+                missingParams.push(param);
+            }
+        }
+        if (missingParams.length) {
+            const missingParamsString = missingParams.join(' ,');
+            const errorRes = utilities_1.buildErrorResponse(null, 400, 'Invalid Request', `Request is missing ${missingParamsString}`);
+            return res.status(400).send(errorRes);
+        }
+        else {
+            return next();
+        }
+    }
 };
+exports.checkReqBodyParams = checkReqBodyParams;

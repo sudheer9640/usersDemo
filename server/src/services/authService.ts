@@ -4,14 +4,13 @@ import jwt from 'jsonwebtoken';
 import {constants} from "../constants/constants";
 import {envConstants} from "../config/envConfig";
 
-
 class AuthService {
 
   public register = async (req: any) => {
-      const {userName, phoneNumber, email, password, role} = req.body;
+      const {name, phoneNumber, email, password, role} = req.body;
       try {
         const userData: any = {
-          userName,
+          name,
           phoneNumber,
           email,
           role
@@ -40,7 +39,7 @@ class AuthService {
         if (!user) {
           throw this.buildErr("User doesn't exists");
         } else if (!validPassword(password, user.password)) {
-          this.buildErr('Incorrect password');
+          throw this.buildErr('Incorrect password');
         } else {
           const userJson = {
             _id: user._id,

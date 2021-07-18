@@ -1,11 +1,7 @@
-import {Response} from 'express';
-import {basename} from 'path';
-
-const fileName = basename(__filename);
 
 export const buildErrorResponse = (errorObj: any, code?: number, errorMessage?: any, errorDescription?: any): any => {
     const {name, message, body, statusCode} = !!errorObj && errorObj;
-    let {error, error_description} = !!body && body;
+    const {error, error_description} = !!body && body;
     return {
         statusCode: code || statusCode || 500,
         error: {
@@ -17,10 +13,10 @@ export const buildErrorResponse = (errorObj: any, code?: number, errorMessage?: 
 
 export const buildSuccessResponse = (statusCode: number, message: string, data?: any): any => {
     return {
-        statusCode: statusCode,
+        statusCode,
         body: {
-            message: message,
-            data: data
+            message,
+            data
         }
     };
 };

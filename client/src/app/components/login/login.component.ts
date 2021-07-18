@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Subscription} from "rxjs";
 import {Router} from "@angular/router";
 import {AlertService} from '../../services/alert/alert.service';
 import {HttpService} from '../../services/http/http.service';

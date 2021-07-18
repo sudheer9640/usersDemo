@@ -38,8 +38,8 @@ export class HttpInterceptorService implements HttpInterceptor {
         }
       }, (error) => {
         this.spinner.display(false);
-        console.error('ERROR', error, error.error?.userMessage);
-        this.alertService.error(error.statusText);
+        console.error('ERROR', error.error?.userMessage);
+        this.alertService.error(error.error?.userMessage);
       }));
   }
 

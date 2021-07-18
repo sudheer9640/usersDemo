@@ -3,6 +3,7 @@ import {apiEndpoints} from "../../constants/apiEndPoints";
 import {HttpService} from "../../services/http/http.service";
 import {Router} from "@angular/router";
 import {AlertService} from "../../services/alert/alert.service";
+import {routeConstants} from "../../constants/constants";
 
 @Component({
   selector: 'app-register',
@@ -37,7 +38,7 @@ export class RegisterComponent implements OnInit {
     this.http.post(apiEndpoints.REGISTER, data).subscribe((res: any) => {
         if (res.message) {
           this.alert.success(res.message);
-          this.router.navigate([apiEndpoints.LOGIN]);
+          this.router.navigate([routeConstants.LOGIN]);
         } else {
           this.alert.error(res.message);
         }
