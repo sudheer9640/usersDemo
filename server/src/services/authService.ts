@@ -1,15 +1,16 @@
 import {generateHash, User, validPassword} from '../mongoDb/models/user.model';
 import {mongoClient} from '../mongoDb/mongoClient';
 import jwt from 'jsonwebtoken';
-import {constants} from "../constants/constants";
 import {envConstants} from "../config/envConfig";
+import {UserInterface} from "../interfaces/userInterface";
+import {LoginInterface} from "../interfaces/loginInterface";
 
 class AuthService {
 
   public register = async (req: any) => {
       const {name, phoneNumber, email, password, role} = req.body;
       try {
-        const userData: any = {
+        const userData: UserInterface = {
           name,
           phoneNumber,
           email,
@@ -31,7 +32,7 @@ class AuthService {
     try {
       const { email, password} = loginRequest.body;
       try {
-        const query: any = {
+        const query: LoginInterface = {
           email
         };
         // console.log('login service query', query)
@@ -44,8 +45,8 @@ class AuthService {
           const userJson = {
             _id: user._id,
             role: user.role,
-            fullName: user.fullName,
-            instId: user.instId
+            email: user.email,
+            name: user.name
           };
           const token = jwt.sign(userJson, envConstants.JWT_SECRET, {
             expiresIn: 604800 // 1 week

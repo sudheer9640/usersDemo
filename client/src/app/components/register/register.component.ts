@@ -4,6 +4,7 @@ import {HttpService} from "../../services/http/http.service";
 import {Router} from "@angular/router";
 import {AlertService} from "../../services/alert/alert.service";
 import {routeConstants} from "../../constants/constants";
+import {UserModel} from "../../models/userModel";
 
 @Component({
   selector: 'app-register',
@@ -12,13 +13,7 @@ import {routeConstants} from "../../constants/constants";
 })
 export class RegisterComponent implements OnInit {
 
-  registerModel = {
-    name: '',
-    email: '',
-    phoneNumber: '',
-    password: '',
-    role: ''
-  };
+  registerModel: UserModel = new UserModel();
   cPassword: string = '';
   userRoles: string[] = ['employee', 'admin'];
 
@@ -50,7 +45,7 @@ export class RegisterComponent implements OnInit {
 
   confirmPassword() {
    if (this.registerModel.password === this.cPassword) {
-     // this.registerModel
+     // to be done
    }
   }
 

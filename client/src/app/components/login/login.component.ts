@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {AlertService} from '../../services/alert/alert.service';
 import {HttpService} from '../../services/http/http.service';
-import {apiEndpoints} from "../../constants/apiEndPoints";
 import {AuthService} from "../../services/auth/auth.service";
-
+import {LoginModel} from '../../models/loginModel';
 
 @Component({
   selector: 'app-login',
@@ -14,11 +13,7 @@ import {AuthService} from "../../services/auth/auth.service";
 export class LoginComponent implements OnInit {
 
   loggedInSubscription!: number;
-
-  loginModel = {
-    email: '',
-    password: ''
-  };
+  loginModel: LoginModel = new LoginModel();
 
   constructor(private router: Router,
               private httpService: HttpService,
