@@ -28,6 +28,3 @@ passport.use(
   )
 );
 
-/*** Authorization Required middleware ***/
-export const isAuthorized = (req: Request, res: Response, next: NextFunction) => {
-};

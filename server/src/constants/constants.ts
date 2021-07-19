@@ -8,3 +8,8 @@ export const REQ_MANDATORY_PARAMS: any = {
     login: ['email', 'password'],
     register: ['email', 'password', 'phoneNumber', 'role']
 };
+
+export const roles:any = {
+    EMPLOYEE: 'employee',
+    ADMIN: 'admin'
+};

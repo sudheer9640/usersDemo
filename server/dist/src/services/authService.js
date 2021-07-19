@@ -60,8 +60,8 @@ class AuthService {
                         const userJson = {
                             _id: user._id,
                             role: user.role,
-                            fullName: user.fullName,
-                            instId: user.instId
+                            email: user.email,
+                            name: user.name
                         };
                         const token = jsonwebtoken_1.default.sign(userJson, envConfig_1.envConstants.JWT_SECRET, {
                             expiresIn: 604800 // 1 week

@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isAuthorized = void 0;
 const passport_1 = __importDefault(require("passport"));
 const passport_jwt_1 = __importDefault(require("passport-jwt"));
 const user_model_1 = require("../mongoDb/models/user.model");
@@ -27,7 +26,3 @@ passport_1.default.use(new JwtStrategy({
         }
     });
 }));
-/*** Authorization Required middleware ***/
-const isAuthorized = (req, res, next) => {
-};
-exports.isAuthorized = isAuthorized;

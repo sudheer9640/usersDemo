@@ -1,8 +1,10 @@
 import {NextFunction, Request, Response} from 'express';
 import {buildErrorResponse} from './utils/utilities';
 import {basename} from 'path';
+import jwt from 'jsonwebtoken';
 import {envConstants} from "./config/envConfig";
 import {REQ_MANDATORY_PARAMS} from "./constants/constants";
+import {User} from "./mongoDb/models/user.model";
 
 const fileName = basename(__filename);
 
@@ -26,6 +28,36 @@ export const addResponseHeaders = (req: Request, res: Response, next: NextFuncti
     }
 };
 
+
+export const isAuthorized = (roles: string[]) => {
+    const unAuthorizedErr = buildUnauthorizedError();
+    return (req: Request, res: Response, next: NextFunction) => {
+        if (!req.headers.authorization) {
+            return res.status(unAuthorizedErr.statusCode).send(unAuthorizedErr.error);
+        }
+        const token = req.headers.authorization.split(' ')[1];
+        return jwt.verify(token, envConstants.JWT_SECRET, (err: any, decoded: any) => {
+            if (err) {
+                return res.status(unAuthorizedErr.statusCode).send(unAuthorizedErr.error);
+            }
+            const userId = decoded._id;
+            return User.findById(userId, (userErr: any, user: any) => {
+                if (userErr || !user) {
+                    return res.status(unAuthorizedErr.statusCode).send(unAuthorizedErr.error);
+                }
+                if (roles) {
+                    if (roles.indexOf(user.role) > -1) {
+                        return next();
+                    } else {
+                        return res.status(unAuthorizedErr.statusCode).send(unAuthorizedErr.error);
+                    }
+                }
+                return next();
+            });
+        });
+    };
+};
+
 export const checkReqBodyParams = (req: Request, res: Response, next: NextFunction) => {
     const reqUrl = req.url.replace('/', '').trim();
     if (REQ_MANDATORY_PARAMS[reqUrl]) {
@@ -46,4 +78,7 @@ export const checkReqBodyParams = (req: Request, res: Response, next: NextFuncti
     }
 };
 
-
+const buildUnauthorizedError = (err?: any) => {
+    const error = buildErrorResponse(err, 401, 'Unauthorized', 'Access Forbidden')
+    return error;
+}
